@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div id="posts">
+  <h1>Books</h1>
+  <%= link_to 'Request new book', new_book_path %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <%= render @books %>
+  </table>
+  <br>
+</div>
+<%= will_paginate @posts %>
